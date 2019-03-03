@@ -1,0 +1,11 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+    <div class="product-page">
+        <div class="products">
+            <h2>{{ products.name }}</h2>
+            <p>{{ products.price }}</p>
+            <p>{{ products.description }}</p>
+        </div>
+    </div>
+{% endblock %}

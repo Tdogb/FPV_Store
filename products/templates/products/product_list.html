@@ -1,0 +1,13 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+<h1>Product List</h1>
+    <div class="products">
+        {% for product in products %}
+            <div class="product">
+                <h2><a href={% url 'products:product_page' slug=product.slug %} >{{ product.name }}</a></h2>
+                <p>{{ product.price }}</p>
+                <p>{{ product.in_stock }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
