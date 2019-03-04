@@ -2,4 +2,7 @@
 
 {% block content %}
     <h1>Welcome to the Homepage</h1>
+    <a href="{% url 'accounts:signup' %}">signup</a>
+    <a href="{% url 'accounts:login' %}">login</a>
+    <a href="/admin/">admin</a>
 {% endblock %}

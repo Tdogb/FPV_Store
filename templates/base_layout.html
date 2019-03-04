@@ -9,7 +9,22 @@
     </head>
     <body>
         <div class="wrapper">
-            <h1><a href="{% url 'products:list' %}">Products</a></h1>
+            <header>
+                <h1><a href="/">FPV Store</a></h1>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="{% url 'products:list' %}">Products</a>
+                        </li>
+                        <li>
+                            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+                                {% csrf_token %}
+                                <button type="submit">Logout</button>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
             {% block content %}
             {% endblock %}
         </div>
