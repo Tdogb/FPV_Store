@@ -1,5 +1,6 @@
-from django.conf.urls import url
+from django.conf.urls import url, include
 from . import views
+from oscar.app import application
 
 app_name = 'orders'
 
