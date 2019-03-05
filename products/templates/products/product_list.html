@@ -1,10 +1,20 @@
 {% extends 'base_layout.html' %}
 {% block content %}
-<h1>Product List</h1>
+<h1>Products</h1>
     <div class="container">
         <div class="row">
         {% for product in products %}
-                <div class="product-div col-sm-6 col-lg-4"><p class="product">{{ product }}</p></div>
+                <div class="product-div col-sm-6 col-lg-3">
+                <a href="{% url 'products:product_page' slug=product.slug %}">
+                    <header class="product-header"><h4>{{ product.name }}</h4></header>
+                    <div class="media">
+                        <img src="{{ product.thumb.url }}">
+                    </div>
+                    {% if product.in_stock == False %}
+                        <footer class="product-footer"><p>Out of stock</p></footer>
+                    {% endif %}
+                </a>
+                </div>
         {% endfor %}
         </div>
     </div>

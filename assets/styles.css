@@ -5,9 +5,17 @@ body {
     background-color: #ffcc47;
 }
 
-.product {
+.product-div {
+    padding: 3px;
+    border: 2px solid;
+    border-radius: 10px;
+    margin: 2px;
 }
 
-.product-div {
-    border: 1px;
+.product-div:hover {
+    background-color: #e6e6e6;
+}
+
+.product-header {
+
 }

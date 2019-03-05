@@ -9,6 +9,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     in_stock = models.BooleanField()
     description = models.TextField()
+    thumb = models.ImageField(default='/media/default.png')
 
     def __str__(self):
         return self.name
