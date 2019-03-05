@@ -1,6 +1,13 @@
 {% extends 'base_layout.html' %}
 {% block content %}
 <h1>Product List</h1>
+    <div class="container">
+        <div class="row">
+        {% for product in products %}
+                <div class="product-div col-sm-6 col-lg-4"><p class="product">{{ product }}</p></div>
+        {% endfor %}
+        </div>
+    </div>
     <div class="products">
         {% for product in products %}
             <div class="product">
