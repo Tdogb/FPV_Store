@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^products/', include('products.urls')),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^orders/', include('orders.urls')),
     url(r'^about/$', views.about),
     url(r'^$', views.homePage),
 ]
